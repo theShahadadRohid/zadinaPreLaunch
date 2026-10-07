@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Zadina Dates & Nuts | Coming Soon</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --green: #334936;
+        --brown: #4b3024;
+        --cream: #f6f2ea;
+        --white: #ffffff;
+        --muted: #766b63;
+      }
+
+      body {
+        min-height: 100vh;
+        background: var(--cream);
+        color: var(--brown);
+        font-family: Arial, Helvetica, sans-serif;
+        overflow: hidden;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Decorative background */
+
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .circle-one {
+        width: 420px;
+        height: 420px;
+        background: var(--green);
+        opacity: 0.06;
+        top: -180px;
+        right: -120px;
+      }
+
+      .circle-two {
+        width: 300px;
+        height: 300px;
+        background: var(--brown);
+        opacity: 0.05;
+        bottom: -130px;
+        left: -100px;
+      }
+
+      /* Header */
+
+      header {
+        width: 100%;
+        padding: 30px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .logo-placeholder {
+        width: 190px;
+        min-height: 55px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px dashed rgba(75, 48, 36, 0.35);
+        border-radius: 10px;
+
+        color: var(--brown);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      /*
+      Replace the div above with your actual logo later.
+
+      Example:
+
+      <img
+        src="logo.png"
+        alt="Zadina Dates & Nuts"
+        class="logo"
+      >
+    */
+
+      /* Main */
+
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 24px 80px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .content {
+        width: 100%;
+        max-width: 760px;
+        text-align: center;
+      }
+
+      .small-text {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+
+        margin-bottom: 24px;
+      }
+
+      .small-text::before,
+      .small-text::after {
+        content: "";
+        width: 24px;
+        height: 1px;
+        background: var(--green);
+        opacity: 0.5;
+      }
+
+      h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(52px, 8vw, 92px);
+        line-height: 0.95;
+        font-weight: 500;
+        letter-spacing: -3px;
+        color: var(--brown);
+        margin-bottom: 28px;
+      }
+
+      h1 span {
+        color: var(--green);
+        display: block;
+      }
+
+      .description {
+        max-width: 520px;
+        margin: 0 auto 34px;
+
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .facebook-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        padding: 14px 24px;
+
+        background: var(--green);
+        color: var(--white);
+
+        border-radius: 50px;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .facebook-link:hover {
+        background: var(--brown);
+        transform: translateY(-2px);
+      }
+
+      .facebook-icon {
+        width: 22px;
+        height: 22px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      /* Footer */
+
+      footer {
+        padding: 22px 6%;
+        text-align: center;
+
+        color: rgba(75, 48, 36, 0.55);
+
+        font-size: 11px;
+        letter-spacing: 0.5px;
+
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Mobile */
+
+      @media (max-width: 600px) {
+        header {
+          padding-top: 24px;
+        }
+
+        main {
+          padding-top: 30px;
+          padding-bottom: 50px;
+        }
+
+        .logo-placeholder {
+          width: 170px;
+          min-height: 50px;
+        }
+
+        .small-text {
+          font-size: 10px;
+          letter-spacing: 2px;
+        }
+
+        h1 {
+          font-size: clamp(48px, 15vw, 68px);
+          letter-spacing: -2px;
+        }
+
+        .description {
+          font-size: 14px;
+          max-width: 340px;
+        }
+
+        .facebook-link {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .circle-one {
+          width: 280px;
+          height: 280px;
+          right: -150px;
+        }
+
+        .circle-two {
+          width: 220px;
+          height: 220px;
+          left: -130px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="circle circle-one"></div>
+      <div class="circle circle-two"></div>
+
+      <!-- Logo -->
+      <header>
+        <div class="">
+          <img
+            src="./assets/logo.jpeg"
+            alt="Logo"
+            style="width: 150px; height: auto"
+          />
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <div class="content">
+          <div class="small-text">Something new is coming</div>
+
+          <h1>
+            Something
+            <span>crazy is coming.</span>
+          </h1>
+
+          <p class="description">
+            We're building a new online experience for Zadina Dates & Nuts. Our
+            new website is on the way. Until then, stay connected with us on
+            Facebook.
+          </p>
+
+          <a
+            href="https://www.facebook.com/zadinadatesnuts"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="facebook-link"
+          >
+            <span class="facebook-icon">f</span>
+            Visit our Facebook
+          </a>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>© 2026 Zadina Dates & Nuts</footer>
+    </div>
+  </body>
+</html>
